@@ -1,8 +1,6 @@
 import express from "express"
 import cors from "cors"
-import dontenv from "dotenv"
 
-dontenv.config()
 
 const PORT = '3369'
 import Database from "better-sqlite3"
