@@ -12,6 +12,6 @@ db.exec(`CREATE TABLE IF NOT EXISTS feedbacks (
 
     VALUES
     ('Abel', 'I loved the service, hopefully i will come back'),
-    ('Jhon', 'large and clean bed rooms '),
+    ('Jhon', 'large and clean bed rooms'),
     ('Tom', 'Nice breakfast')
     `)

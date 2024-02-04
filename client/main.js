@@ -41,10 +41,11 @@ async function displayFeedbacks() {
   newContainer.innerHTML = ''
   feedbacks.forEach(feedback => {
 
-  
+    
     let linie1TAg = document.createElement('h3')
     let line2TAg = document.createElement('p')
     let delButton = document.createElement('button')
+
   
 
 
@@ -57,6 +58,7 @@ async function displayFeedbacks() {
     line2TAg.textContent = feedback.feedback
     delButton.textContent = 'Delete'
     
+    
 
   
     infoDiv.appendChild(linie1TAg)
@@ -64,6 +66,9 @@ async function displayFeedbacks() {
     infoDiv.appendChild(delButton)
     feedbackMsg.appendChild(infoDiv)
     newContainer.appendChild(feedbackMsg)
+
+   
+
 
     delButton.addEventListener('click', (e) => {
       e.preventDefault()

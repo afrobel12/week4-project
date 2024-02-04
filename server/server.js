@@ -1,5 +1,8 @@
 import express from "express"
 import cors from "cors"
+import dontenv from "dotenv"
+
+dontenv.config()
 
 const PORT = '3369'
 import Database from "better-sqlite3"
@@ -38,8 +41,6 @@ app.get('/feedbacks', (req, res) =>{
 app.post('/feedbacks', (req, res) =>{
     try{
 
-
-
     const gust = req.body.gust
     const feedback = req.body.feedback
 
@@ -48,8 +49,10 @@ app.post('/feedbacks', (req, res) =>{
     } catch (err) {
         res.status(500).json({error :err})
     }
+    
 
 })
+
 
 app.delete('/feedbacks/:id', (req, res) =>{
     try {
