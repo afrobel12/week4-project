@@ -12,7 +12,7 @@ form.addEventListener('submit', async (e) =>{
 const formData = new FormData(form)
 const feedbackData = Object.fromEntries(formData)
 
-const response = await fetch(`${baseURL}/feedbacks`,{
+const response = await fetch(`https://gust-book1.onrender.com/feedbacks`,{
   method: "POST",
   headers : {
     "Content-Type" : "application/json"
