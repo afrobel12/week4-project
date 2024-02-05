@@ -2,7 +2,7 @@ const form = document.getElementById('form')
 const newContainer = document.getElementById('new-container')
 
 
-const baseURL = 'http://localhost:3369'
+const baseURL = 'https://gust-book1.onrender.com'
 
 form.addEventListener('submit', async (e) =>{
   e.preventDefault()
@@ -28,7 +28,7 @@ if (response.ok) {
 })
 
 async function fetchFeedbacks() {
-  const feedbacks = await fetch(`${baseURL}/feedbacks`)
+  const feedbacks = await fetch(`https://gust-book1.onrender.com/feedbacks`)
   let result = await feedbacks.json()
   return result
 }
@@ -81,7 +81,7 @@ async function displayFeedbacks() {
 displayFeedbacks()
 
 async function handleDelete(id) {
-  const result = await fetch(`${baseURL}/feedbacks/${id}`,{
+  const result = await fetch(`https://gust-book1.onrender.com/feedbacks/${id}`,{
     method:"DELETE"
   })
   console.log(result)
@@ -90,17 +90,4 @@ async function handleDelete(id) {
   }
 }
 
-async function handleUpdate(id, updatedInfo) {
-  const result = await fetch(`${baseURL}/feedbacks/${id}`,{
-    method:"PUT",
-    headers: {
-      "Content-Type" : "application/json"
-    },
-    body : JSON.stringify(updatedInfo)
-  })
-
-  if(result.ok) {
-    displayFeedbacks()
-  }
-}
 
