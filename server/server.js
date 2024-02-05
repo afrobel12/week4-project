@@ -11,11 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (req, res) =>{
 
-    res.send('lets gooooo')
-
-})
 
 app.get('/feedbacks', (req, res) =>{
     try{
