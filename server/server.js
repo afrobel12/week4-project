@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 
 
-const PORT = '3369'
+const PORT = process.env.PORT || 3369
 import Database from "better-sqlite3"
 
 const db = new Database('database.db')
